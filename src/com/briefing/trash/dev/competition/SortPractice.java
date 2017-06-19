@@ -7,7 +7,7 @@ public class SortPractice {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        String fileInput = "/Users/kumetoshiyuki/Downloads/test01.csv";
-        String fileOutput = "/Users/kumetoshiyuki/Downloads/TestOutput.csv";
+        String fileInput = "/hands-on01_csv/resources/csv/input.csv";
+        String fileOutput = "/hands-on01_csv/resources/csv/output.csv";
     }
 }
