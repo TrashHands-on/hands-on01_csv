@@ -2,6 +2,7 @@ package com.briefing.trash.dev.competition;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.Comparator;
 
 /**
  * TODO イケてない
@@ -9,22 +10,22 @@ import java.time.temporal.ChronoUnit;
  */
 public class BubbleSort implements ISort<Bullet>{
 
-    @Override
-    public Bullet[] sort(Bullet[] bullets) {
-        // ソート開始
-        final LocalDateTime sortStart = LocalDateTime.now();
-        System.out.println("## SORT START " + sortStart);
-
-        // バブルソート
-        Bullet[] ret = BubbleSort.bubbleSort(bullets);
-
-        // ソート終了
-        final LocalDateTime sortFinish = LocalDateTime.now();
-        System.out.println("### END   " + sortFinish);
-        System.out.println("### takes " + sortStart.until(sortFinish, ChronoUnit.MILLIS));
-        
-        return ret;
-    }
+//    @Override
+//    public Bullet[] sort(Bullet[] bullets) {
+//        // ソート開始
+//        final LocalDateTime sortStart = LocalDateTime.now();
+//        System.out.println("## SORT START " + sortStart);
+//
+//        // バブルソート
+//        Bullet[] ret = BubbleSort.bubbleSort(bullets);
+//
+//        // ソート終了
+//        final LocalDateTime sortFinish = LocalDateTime.now();
+//        System.out.println("### END   " + sortFinish);
+//        System.out.println("### takes " + sortStart.until(sortFinish, ChronoUnit.MILLIS));
+//        
+//        return ret;
+//    }
     
     /**
      * 
@@ -49,4 +50,10 @@ public class BubbleSort implements ISort<Bullet>{
         }
         return bullets;
     }
+
+	@Override
+	public Bullet[] sort(Bullet[] array, Comparator<Bullet> comparator) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class BubbleSortPractice {
+public class SortPractice {
 
     public static final String DIR_PATH = "resources/csv";
     public static final String INPUT_FILE_NAME = "input.csv";
@@ -46,7 +46,7 @@ public class BubbleSortPractice {
 
         // ソート
         ISort<Bullet> sorter = new BubbleSort();
-        Bullet[] sortedBullets = sorter.sort(bullets);
+        Bullet[] sortedBullets = sorter.sort(bullets,null);
 
         // ファイル書き出し
         Path outputPath = Paths.get(DIR_PATH + "/" + OUTPUT_FILE_NAME);
