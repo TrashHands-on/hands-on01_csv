@@ -26,13 +26,13 @@ public class Member {
 		this.gender = gender;
 		this.favourite = FavouriteMember.AYAKA;
 		this.career = 8;
-		this.old = (int) Math.random() * 72;
+		this.old = Utils.getRandomOld();
 		this.UUID = Utils.getUUID();
 	}
 	
 	@Override
 	public String toString()
 	{
-		return String.join(",", memberNo, name, gender.val, favourite.nickName, (career + ""), (old + "") + UUID);
+		return String.join(",", memberNo, name, gender.val, favourite.nickName, (career + ""), (old + ""), UUID);
 	}
 }

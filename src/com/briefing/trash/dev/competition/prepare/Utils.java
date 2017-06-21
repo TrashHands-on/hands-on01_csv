@@ -1,11 +1,22 @@
 package com.briefing.trash.dev.competition.prepare;
 
+import java.util.Random;
 import java.util.UUID;
 import java.util.zip.CRC32;
 import java.util.zip.Checksum;
 
 public class Utils {
 
+	private static Random rnd = new Random();
+	
+	/**
+	 * 年齢っぽい乱数を生成する。
+	 * @return
+	 */
+	public static int getRandomOld() 
+	{
+		return rnd.nextInt(72) + 5;
+	}
 	/**
 	 * UUID取得
 	 * @return
