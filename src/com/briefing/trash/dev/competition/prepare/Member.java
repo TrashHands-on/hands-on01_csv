@@ -11,6 +11,7 @@ public class Member {
 	public final Gender gender;
 	public final FavouriteMember favourite;
 	public final int career;
+	public final int old;
 	public final String UUID;
 
 	/**
@@ -25,12 +26,13 @@ public class Member {
 		this.gender = gender;
 		this.favourite = FavouriteMember.AYAKA;
 		this.career = 8;
+		this.old = (int) Math.random() * 72;
 		this.UUID = Utils.getUUID();
 	}
 	
 	@Override
 	public String toString()
 	{
-		return String.join(",", memberNo, name, gender.val, favourite.nickName, (career + ""), UUID);
+		return String.join(",", memberNo, name, gender.val, favourite.nickName, (career + ""), (old + "") + UUID);
 	}
 }
