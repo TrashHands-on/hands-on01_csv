@@ -11,12 +11,13 @@ import java.util.stream.Collectors;
 
 import org.jsoup.Jsoup;
 
-import com.briefing.trash.dev.competition.SortPractice;
-
 /**
  * 力技でCSVデータを生成する
  */
 public class InputCsvGenerator {
+    public static final String DIR_PATH = "src/main/resources/csv";
+    public static final String INPUT_FILE_NAME = "input.csv";
+    public static final String OUTPUT_FILE_NAME = "out.csv";
 
 	/** HEX_CODEって何？ */
 	private static final String HEADER = "会員No.,氏名,性別,推しメン,ファン歴年数,年齢,HEX_CODE";
@@ -24,9 +25,9 @@ public class InputCsvGenerator {
 	public static void main(String[] args) throws IOException {
 		System.out.println("はじめ");
 		// ファイル削除
-		Files.deleteIfExists(Paths.get(SortPractice.DIR_PATH + "/" + SortPractice.INPUT_FILE_NAME));
+		Files.deleteIfExists(Paths.get(DIR_PATH + "/" + INPUT_FILE_NAME));
 
-		try(BufferedWriter bw = Files.newBufferedWriter(Paths.get(SortPractice.DIR_PATH + "/" + SortPractice.INPUT_FILE_NAME), StandardCharsets.UTF_8, StandardOpenOption.CREATE_NEW);) 
+		try(BufferedWriter bw = Files.newBufferedWriter(Paths.get(DIR_PATH + "/" + INPUT_FILE_NAME), StandardCharsets.UTF_8, StandardOpenOption.CREATE_NEW);) 
 		{
 			bw.write(HEADER);
 			bw.newLine();
